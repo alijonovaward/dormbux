@@ -89,7 +89,7 @@ def hikvision_event(request):
                 return HttpResponse("OK", content_type="text/plain")
 
             try:
-                device = Device.objects.get(main_ip=ip)
+                device = Device.objects.get(ipaddress=ip)
             except Device.DoesNotExist:
                 processed_events[event_id] = now()
                 return HttpResponse("OK", content_type="text/plain")

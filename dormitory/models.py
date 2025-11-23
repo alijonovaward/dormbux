@@ -21,7 +21,6 @@ class Device(models.Model):
     username = models.CharField(max_length=100, blank=False)
     password = models.CharField(max_length=100, blank=False)
     entrance = models.BooleanField(default=True)
-    main_ip = models.CharField(max_length=25, blank=True, null=True)
 
     def __str__(self):
         return f"{self.pk} -> {self.dormitory.name} -> {self.entrance}"
