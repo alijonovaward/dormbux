@@ -18,9 +18,9 @@
             <a href="{% url 'student_add' %}" class="btn btn-success">Qo'shish</a>
             <button id="export-btn" class="btn btn-primary">Yuklash</button>
             {% if user.role == "director" %}
-            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#addStudentsModal">
-                Talabalarni qurilmalarga qo‘shish
-            </button>
+<!--            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#addStudentsModal">-->
+<!--                Talabalarni qurilmalarga qo‘shish-->
+<!--            </button>-->
             <form action="{% url 'students_delete_all' %}" method="post" style="display:inline;">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-danger" onclick="return confirm('Haqiqatan ham barcha talabalarni o‘chirmoqchimisiz?')">
